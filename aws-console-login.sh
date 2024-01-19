@@ -13,7 +13,7 @@ stsSessionToken=$(echo $assumeRoleResult | awk '{print $8}')
 
 signinTokenResult=$(curl -s --get https://${region}.signin.aws.amazon.com/federation \
   --data-urlencode "Action=getSigninToken" \
-  --data-urlencode "SessionDuration=3600" \
+  --data-urlencode "SessionDuration=43200" \
   --data-urlencode "Session={\"sessionId\":\"${stsAccessKeyId}\",\"sessionKey\":\"${stsSecretAccessKey}\",\"sessionToken\":\"${stsSessionToken}\"}")
 
 signinToken=$(echo $signinTokenResult | cut  -d '"' -f 4)
