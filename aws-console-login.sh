@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-roleArn=${1?"Usage: $0 <role-arn> <role-session-name> <profile>"}
+roleArn=${1?"Usage: $0 <role-arn> <role-session-name> <profile> <region>"}
 roleSessionName=${2?"Usage: $0 <role-arn> <role-session-name> <profile> <region>"}
 profile=${3:-default}
 region=${4:-us-east-2}
